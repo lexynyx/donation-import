@@ -52,7 +52,7 @@ csv_info = csv.reader(info)
 for row in csv_info
 print row """print row[#]"""
 
-"""create a list of certain attribute of the database SAMPLE"""
+"""create a list of certain attribute of the database This is an extra SAMPLE"""
 csv_CSV_FIRST_NAME = []
 
 for row in csv_info
@@ -65,6 +65,9 @@ print csv_CSV_FIRST_NAME """this will print a single list of all the donator's n
 3. make a loop so that 
    3.1 it reads the array row 
    3.2 another loop to read all the attribute in the array
+      3.2.1 by  going through each attribute one by one 
    3.3 input the correct array into the correct database column
+      3.3.1 insert values(col1, col2, col3, ......, coln)
 """
+def getFirstName 
 
