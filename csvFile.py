@@ -46,9 +46,10 @@ csvRecords = getRecords(csvObject)
 print csvRecords[1].firstName
 
 """make a function to increment the array """
-def information (csvRecords):
+def add_Individual (csvRecords):
    csvFile = open(filename, 'rb')
    # for ( var i = 1 ; i <= csvRecords.length?? ; i ++)
+   for index in range(1, csvRecods.length):
    # csvRecords[i]
 F_Name = csvRecords[i].firstName
 L_Name = csvRecords[i].lastname
@@ -59,10 +60,9 @@ postalC = csvRecords[i].postalCode
 amountPaid = csvRecords[i].amountPaid 
 datePaid = csvRecords[i].datePaid
 
- 
-insertQuery = 'insert into individual vaues ({F_name , L_name , address , city , province , postalC , amountPaid , datePaid})'
+insertQuery = 'insert into individual values ({?,?,?,?,?,?,?,?});' 
 cursor = connection.cursor()
-cursor.execute(insertQuery, csvFile)
+cursor.execute(insertQuery, dic)
 
-dic = [(i['col1'], i['col2']) for i in openCsvFile()]
+dic = [(i['firstName'], i['lastName'], i['address'], i['city'] , i['province'] , i['postal_code'], i['ammount_paid'] , i['date_paid']) for i in openCsvFile()]
  
