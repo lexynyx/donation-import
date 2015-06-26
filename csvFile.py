@@ -47,6 +47,7 @@ print csvRecords[1].firstName
 
 """make a function to increment the array """
 def information (csvRecords):
+   csvFile = open(filename, 'rb')
    # for ( var i = 1 ; i <= csvRecords.length?? ; i ++)
    # csvRecords[i]
 F_Name = csvRecords[i].firstName
@@ -57,13 +58,11 @@ province = csvRecords[i].province
 postalC = csvRecords[i].postalCode
 amountPaid = csvRecords[i].amountPaid 
 datePaid = csvRecords[i].datePaid
-  
 
-csvFile = open(filename, 'rb')
-   
-insertQuery = 'insert into individual vaues ({})'
+ 
+insertQuery = 'insert into individual vaues ({F_name , L_name , address , city , province , postalC , amountPaid , datePaid})'
 cursor = connection.cursor()
-cursor.execute(query, csvFile)
+cursor.execute(insertQuery, csvFile)
 
-dic = [(i['col1'], i[col2']) for i in openCsvFile()]
+dic = [(i['col1'], i['col2']) for i in openCsvFile()]
  
