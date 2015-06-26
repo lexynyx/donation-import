@@ -44,3 +44,17 @@ def getRecords(csvObject):
 csvObject = openCsvFile("CharityDataDownload.csv")
 csvRecords = getRecords(csvObject)
 print csvRecords[1].firstName
+
+"""looping through rows, so that we can read the information, making it an array"""
+info = open ('charitydatadownload.csv')
+csv_info = csv.reader(info)
+
+for row in csv_info
+print row """print row[#]"""
+
+"""create a list of certain attribute of the database SAMPLE"""
+csv_CSV_FIRST_NAME = []
+
+for row in csv_info
+csv_CSV_FIRST_NAME.append(row[1])
+print csv_CSV_FIRST_NAME """this will print a single list of all the attendee's name"""
