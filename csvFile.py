@@ -1,6 +1,8 @@
 # CSV file related functions
 
 import csv
+import sys
+import sqlite3
 
 # CONSTANTS
 """ Constants for CSV file """
@@ -64,5 +66,11 @@ insertQuery = 'insert into individual values ({?,?,?,?,?,?,?,?});'
 cursor = connection.cursor()
 cursor.execute(insertQuery, dic)
 
-dic = [(i['firstName'], i['lastName'], i['address'], i['city'] , i['province'] , i['postal_code'], i['ammount_paid'] , i['date_paid']) for i in openCsvFile()]
+dic = [(i['firstName'], i['lastName'], i['address'], i['city'] , i['province'] , i['postal_code'], i['amount_paid'] , i['date_paid']) for i in openCsvFile()]
+
+"""check if the name already exists in the database
+   if it already does check if other information is the same 
+   if all information is the same just add the amount paid, datepaid
+   
+   else if the name doesnt exist continue with the insert"""
  
