@@ -32,7 +32,7 @@ def openCsvFile(filename):
    csvOutput = csv.reader(csvFile, delimiter=__CSV_DELIMETER__)
    return csvOutput
 
-def getRecords(csvObject):
+def getRecords(csvObject:)
    """ Return the list of records found inside the CSV file """
    csvRecords = []
    for row in csvObject:
@@ -57,4 +57,14 @@ csv_CSV_FIRST_NAME = []
 
 for row in csv_info
 csv_CSV_FIRST_NAME.append(row[1])
-print csv_CSV_FIRST_NAME """this will print a single list of all the attendee's name"""
+print csv_CSV_FIRST_NAME """this will print a single list of all the donator's name"""
+
+"""
+1. read the csv file
+2. make every row into an array
+3. make a loop so that 
+   3.1 it reads the array row 
+   3.2 another loop to read all the attribute in the array
+   3.3 input the correct array into the correct database column
+"""
+
