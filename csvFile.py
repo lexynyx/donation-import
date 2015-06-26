@@ -45,4 +45,7 @@ csvObject = openCsvFile("CharityDataDownload.csv")
 csvRecords = getRecords(csvObject)
 print csvRecords[1].firstName
 
+query = 'insert into individual vaues ({})'
+cursor = connection.cursor()
+cursor.execute(query, openCsvFile())
  
