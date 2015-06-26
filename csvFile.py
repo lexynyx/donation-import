@@ -45,7 +45,25 @@ csvObject = openCsvFile("CharityDataDownload.csv")
 csvRecords = getRecords(csvObject)
 print csvRecords[1].firstName
 
-query = 'insert into individual vaues ({})'
+"""make a function to increment the array """
+def information (csvRecords):
+   # for ( var i = 1 ; i <= csvRecords.length?? ; i ++)
+   # csvRecords[i]
+F_Name = csvRecords[i].firstName
+L_Name = csvRecords[i].lastname
+address = csvRecords[i].address
+city = csvRecords[i].city
+province = csvRecords[i].province
+postalC = csvRecords[i].postalCode
+amountPaid = csvRecords[i].amountPaid 
+datePaid = csvRecords[i].datePaid
+  
+
+csvFile = open(filename, 'rb')
+   
+insertQuery = 'insert into individual vaues ({})'
 cursor = connection.cursor()
-cursor.execute(query, openCsvFile())
+cursor.execute(query, csvFile)
+
+dic = [(i['col1'], i[col2']) for i in openCsvFile()]
  
